@@ -10,20 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
 					   date: "22.02.2018"
 					}
 				]
-
+	
 	function showNotes() {
-		
 		for(var i=0; i<notes.length; i++) {
-			var newList = document.createElement("LI");
 
+			var newList = document.createElement("LI");
 			var title = document.createTextNode(notes[i].title + " - " + notes[i].date);
 
 			newList.appendChild(title);
-			
-			document.getElementById("myList").appendChild(newList);
 
+			document.getElementById("myList").appendChild(newList);
+		}
 	}
-}
+
+	    showNotes();
 
 	var btn = document.getElementById("button");
 
@@ -38,10 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			notes.push(obiekt);
 			
-	showNotes();
+			var newNote = document.createElement("LI");
+
+			var titleNote = document.createTextNode(t + " - " + d);
+
+			newNote.appendChild(titleNote);
+			document.getElementById("myList").appendChild(newNote);
 
 	})
-});	
+
+});
+
 /*var notes = [
 				{
 				   title: "first note",
