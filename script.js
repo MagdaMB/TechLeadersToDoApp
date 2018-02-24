@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
 				]
 
 	function showNotes() {
-
+		
 		for(var i=0; i<notes.length; i++) {
 			var newList = document.createElement("LI");
 
-			var title = document.createTextNode(notes[i].title);
+			var title = document.createTextNode(notes[i].title + " - " + notes[i].date);
 
 			newList.appendChild(title);
 			
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			notes.push(obiekt);
 			
 	showNotes();
-		
+
 	})
 });	
 /*var notes = [
