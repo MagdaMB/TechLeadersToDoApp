@@ -4,25 +4,40 @@
 	<title>ToDoApp</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-	<h3>Wprowadź nową notatkę podając jej tutył i datę</h3>
-	<form>
-		<input type="text" name="title" placeholder="Podaj tytuł notatki" id="title">
-		<input type="date" name="date" id="date">
-		<button type="button" id="button">Wprowadź</button>
-	</form>
-
-	<h3>Notes: </h3>
-	<button type="button" id="buttonAllNotes">Pokaż wszystkie notatki</button>
-
-	<div class="list">
-		<ol id="myList">
-		
-		</ol>
+<div class="container">
+	<div class="div">
+		<div class="div__header"><h3>Wprowadź nową notatkę podając jej tutył i datę</h3></div>
+		<form class="form">
+			<div class="div__input">
+				<input type="text" name="title" placeholder="Podaj tytuł notatki" id="title">
+				<input type="date" name="date" id="date">
+			</div>
+			<div>
+				<button type="button" id="button" class="div__button">Wprowadź</button>
+			</div>
+		</form>
 	</div>
+
+	<div class="div">
+		<div class="div__header"><h3>Notes: </h3></div>
+
+		<div class="div__list">
+			<ol id="myList">
+			
+			</ol>
+		</div>
+	</div>
+
+	<div class="div div__flex">
+		<div><p class="div__paragraph">Podaj nr notatki do usunięcia i naciśnij przycisk poniżej</p></div>
+		<div class="div__input"><input type="number" name="number" min="1" id="noteNum"></div>
+		<div><button type="reset" id="resetBtn" class="div__button">Usuń notatkę</button></div>
+	</div>
+</div>	
 
 <script type="text/javascript" src="script.js">
 

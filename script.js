@@ -47,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	})
 
+	var resetButton = document.getElementById("resetBtn");
+
+		resetButton.addEventListener('click', function() {
+
+			var num=document.getElementById("noteNum").value;
+
+			var noteList = document.getElementById("myList");
+
+    		noteList.removeChild(noteList.childNodes[num]);
+
+    		notes.splice(num - 1, 1);
+	})		
 });
 
 /*var notes = [
